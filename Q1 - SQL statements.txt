@@ -1,0 +1,52 @@
+create table studentdata (
+	studentid int primary key auto_increment,
+	name varchar(20) not null, /*not null = must enter*/
+	dob date not null,
+	gender char (1) not null,
+	classname varchar (20) not null
+);
+
+insert into studentdata (name, dob, gender, classname) values ('Zoey Wong', '1993-11-03', 'Female', '5D');
+insert into studentdata (name, dob, gender, classname) values ('Vanessa Taylor', '1992-10-27', 'Female', '5D');
+insert into studentdata (name, dob, gender, classname) values ('Ethan Hunt', '1995-06-20', 'Male', '3A');
+insert into studentdata (name, dob, gender, classname) values ('Ada Wong', '1994-03-19', 'Female', '4B');
+insert into studentdata (name, dob, gender, classname) values ('Raymond Holt', '1995-04-12', 'Male', '3C');
+
+create table coursedata (
+	courseid int primary key auto_increment,
+	coursename varchar(100),
+	lecturer varchar(200),
+	courseday varchar(200),
+	coursestarttime time,
+	courseendtime time
+);
+
+insert into coursedata(coursename, lecturer, courseday, coursestarttime, courseendtime) values ("Fundamental of Architecture", "Prof. Fedrick Song", "Tuesday and Thursday", "15:00", "16:30");
+insert into coursedata(coursename, lecturer, courseday, coursestarttime, courseendtime) values ("Advanced Algebra", "Prof. Draco Malfoy", "Monday and Wednesday", "10:30", "12:30");
+insert into coursedata(coursename, lecturer, courseday, coursestarttime, courseendtime) values ("Managerial Microeconomics", "Prof. Monica Siu", "Wednesday and Friday", "16:30", "18:00");
+
+create table enrollments(
+	enrollmentid int primary key auto_increment,
+	enrollment_date date,
+	studentid int,
+	courseid int,
+	foreign key(studentid) references studentdata(studentid),
+	foreign key(courseid) references coursedata(courseid)
+);
+
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-08", 1, 1);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-04", 2, 2);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-02", 3, 3);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-03", 4, 1);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-09", 5, 2);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-18", 1, 3);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-29", 2, 1);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-19", 3, 2);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-21", 4, 3);
+insert into enrollments(enrollment_date, studentid, courseid) values("2022-06-23", 5, 1);
+
+
+
+
+
+

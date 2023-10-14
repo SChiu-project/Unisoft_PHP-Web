@@ -1,0 +1,51 @@
+		body {
+			color:rgb(3, 3, 77);
+			background-color:#DB0B54;
+			font-family: 'Stick No Bills', sans-serif;
+			font-size:40px;
+			text-align:center;
+		}
+		
+		h1 { 
+			font-family: 'Stick No Bills', sans-serif;
+			color:#380450;
+		}
+				
+		img {
+			border:5px solid #75E19D;
+			padding:50px;
+		}
+				
+		p {
+			font-family: 'Fascinate', cursive;
+		}
+		
+		a {
+			font-size:30px;
+			color:green;
+			background-color:white;
+			padding:10px;
+			text-decoration:none; 
+
+		}
+		
+		a:hover {
+			background-color:black;
+			colour white;
+		}
+		
+		table, th, td {
+			border: 5px solid;
+			width: 100%;
+			background-color:#04b18b;
+			table-layout: fixed;
+			padding-top: 20;
+			padding-bottom: 20;
+			text-align:center;
+		}
+
+		label {
+			text-align:left;	
+		}
+
+	
